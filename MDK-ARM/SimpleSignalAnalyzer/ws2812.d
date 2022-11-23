@@ -28,6 +28,7 @@ simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal
 simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 simplesignalanalyzer\ws2812.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
