@@ -3,7 +3,7 @@
 <title>Static Call Graph - [SimpleSignalAnalyzer\SimpleSignalAnalyzer.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image SimpleSignalAnalyzer\SimpleSignalAnalyzer.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 23 13:42:54 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Nov 24 18:40:07 2022
 <BR><P>
 <H3>Maximum Stack Usage =        184 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -293,11 +293,11 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
 </UL>
 
-<P><STRONG><a name="[e8]"></a>__aeabi_fmul</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, fmul.o(.text))
+<P><STRONG><a name="[e9]"></a>__aeabi_fmul</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, fmul.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ws2812_show_freq
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -307,14 +307,16 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ws2812_show_freq
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cal_arr_and_psc
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
-<P><STRONG><a name="[ee]"></a>__ARM_scalbnf</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fscalb.o(.text))
+<P><STRONG><a name="[e4]"></a>__ARM_scalbnf</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fscalb.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 </UL>
 
 <P><STRONG><a name="[fc]"></a>scalbnf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fscalb.o(.text), UNUSED)
@@ -330,7 +332,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ws2812_show_freq
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_freq
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_wave_type
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
@@ -366,9 +368,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
+<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_freq
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_wave_type
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac8830_write_volt
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
@@ -396,7 +397,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
 </UL>
 
 <P><STRONG><a name="[56]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, dflti.o(.text))
@@ -416,7 +417,7 @@ Global Symbols
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cal_arr_and_psc
 </UL>
 
-<P><STRONG><a name="[ed]"></a>__aeabi_f2iz</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, ffixi.o(.text))
+<P><STRONG><a name="[ee]"></a>__aeabi_f2iz</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, ffixi.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ws2812_show_freq
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -430,7 +431,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_freq
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac8830_write_volt
 </UL>
 
@@ -444,9 +445,9 @@ Global Symbols
 
 <P><STRONG><a name="[dd]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ws2812_show_freq
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_freq
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_wave_type
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adj_vp
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac8830_write_volt
@@ -470,11 +471,11 @@ Global Symbols
 
 <P><STRONG><a name="[fe]"></a>__aeabi_cfcmpeq</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, cfcmple.o(.text), UNUSED)
 
-<P><STRONG><a name="[ea]"></a>__aeabi_cfcmple</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cfcmple.o(.text))
+<P><STRONG><a name="[eb]"></a>__aeabi_cfcmple</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cfcmple.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e9]"></a>__aeabi_cfrcmple</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cfrcmple.o(.text))
+<P><STRONG><a name="[ea]"></a>__aeabi_cfrcmple</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cfrcmple.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -991,15 +992,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 </UL>
 
-<P><STRONG><a name="[e4]"></a>HAL_TIM_Base_Start</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_Base_Start))
+<P><STRONG><a name="[e5]"></a>HAL_TIM_Base_Start</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_Base_Start))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e5]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_Base_Start_IT))
+<P><STRONG><a name="[e6]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_Base_Start_IT))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e7]"></a>HAL_TIM_Base_Stop</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_Base_Stop))
+<P><STRONG><a name="[e8]"></a>HAL_TIM_Base_Stop</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_Base_Stop))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1155,7 +1156,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ws2812_show_freq
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_freq
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac8830_write_volt
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
@@ -1506,7 +1507,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Write_Byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_freq
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_show_vpp
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Max7219
 </UL>
 
@@ -1516,10 +1517,10 @@ Global Symbols
 
 <P><STRONG><a name="[104]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[ec]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
+<P><STRONG><a name="[ed]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
+<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1603,12 +1604,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ac]"></a>led_show_freq</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, main.o(i.led_show_freq))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = led_show_freq &rArr; Write_Max7219 &rArr; Write_Byte &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[ac]"></a>led_show_vpp</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, main.o(i.led_show_vpp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = led_show_vpp &rArr; Write_Max7219 &rArr; Write_Byte &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbnf
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Write_Max7219
 </UL>
@@ -1620,17 +1622,17 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfrcmple
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmple
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfrcmple
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmple
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbnf
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbnf
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
@@ -1643,15 +1645,15 @@ Global Symbols
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IC_Start_IT
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Stop
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Stop
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Stop_DMA
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_Calibration_Start
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_HMI_show
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_microsecond
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_wave_type
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cal_arr_and_psc
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adj_vp
@@ -1662,7 +1664,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dac8830_write_volt
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Max7219
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
@@ -1677,35 +1679,35 @@ Global Symbols
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cal_arr_and_psc
 </UL>
 
-<P><STRONG><a name="[e6]"></a>to_microsecond</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, main.o(i.to_microsecond))
+<P><STRONG><a name="[e7]"></a>to_microsecond</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, main.o(i.to_microsecond))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = to_microsecond &rArr; __aeabi_fmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[eb]"></a>uart_HMI_show</STRONG> (Thumb, 142 bytes, Stack size 64 bytes, main.o(i.uart_HMI_show))
+<P><STRONG><a name="[ec]"></a>uart_HMI_show</STRONG> (Thumb, 142 bytes, Stack size 64 bytes, main.o(i.uart_HMI_show))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = uart_HMI_show &rArr; __aeabi_ddiv &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ab]"></a>ws2812_show_freq</STRONG> (Thumb, 426 bytes, Stack size 40 bytes, main.o(i.ws2812_show_freq))
+<P><STRONG><a name="[ab]"></a>ws2812_show_freq</STRONG> (Thumb, 430 bytes, Stack size 40 bytes, main.o(i.ws2812_show_freq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ws2812_show_freq &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d

@@ -180,16 +180,16 @@ float adj_vp() { return wave_type == SINE ? rms * 1.414 : rms; }
 void ws2812_show_freq() {
     WS2812_clear();
     int R = 80, G = 0, B = 0;
-    if (freq <= 3000) {
+    if (freq <= 1000) {
         R = 80, G = 0, B = 0;
-    } else if (freq <= 16500) {
-        R = 80 * (16500 - freq) / 13500;
-        G = 80 * (freq - 3000) / 13500;
+    } else if (freq <= 5500) {
+        R = 80 * (5500 - freq) / 4500;
+        G = 80 * (freq - 1000) / 4500;
         B = 0;
-    } else if (freq < 33000) {
+    } else if (freq < 15500) {
         R = 0;
-        G = 80 * (33000 - freq) / 16500;
-        B = 80 * (freq - 16500) / 16500;
+        G = 80 * (15500 - freq) / 10000;
+        B = 80 * (freq - 5500) / 10000;
     } else {
         R = 0, G = 0, B = 80;
     }
@@ -240,10 +240,33 @@ void led_show_freq() {
     }
 }
 
+void led_show_vpp() {
+    int vpp = (int)(adjVp*2/50 + 0.5); 
+    int row = 1;
+    int dat = 0;
+    while (vpp && row <= 8) {
+        if (vpp >= 8) {
+            dat = 0xff;
+            vpp -= 8;
+        } else {
+            dat = (1 << vpp) - 1;
+            dat <<= 8 - vpp;
+            vpp = 0;
+        }
+        Write_Max7219(row, dat);
+        row++;
+    }
+    while (row <= 8) {
+        Write_Max7219(row, 0);
+        row++;
+    }
+}
+
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     if (htim->Instance == TIM4) {
         ws2812_show_freq();
-        led_show_freq();
+        led_show_vpp();
         dac8830_write_volt(vdc / 1000);
     }
 }
